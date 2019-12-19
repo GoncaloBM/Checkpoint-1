@@ -7,4 +7,16 @@ If the user enters a number that is above 60, your program should fail, and log 
 
 function minuteAngle(minute) {
 
-}
+    let angulo = 0;
+    let minuteMaior30 = minute-30;
+    if (minute < 30) {
+    angulo = ((minute/30)*(180));
+    } else if (minute > 30) {
+    angulo = ((minuteMaior30/30)*(180))+180;
+    }
+        console.log(angulo);
+        return angulo;
+    }
+    
+    minuteAngle(minute);
+    
