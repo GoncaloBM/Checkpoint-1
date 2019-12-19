@@ -1,0 +1,46 @@
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main {
+    max-width: 1200px;
+    margin: 5px;
+    display: grid;
+    grid-gap: 1rem;
+  }
+
+  .pic {
+      height: 5rem;
+      width: 20vw;
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+  }
+
+  .pic1 {
+      background-image: url('https://cdn.pixabay.com/photo/2015/08/14/17/56/herbs-888734_1280.jpg');
+  }
+
+  .pic2 {
+      background-image: url('https://cdn.pixabay.com/photo/2018/04/12/14/51/drink-3313606_1280.jpg');
+  }
+  @media (min-width: 0px) {
+    .main {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  @media (min-width: 480px) {
+    .main {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 760px) {
+    .main {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
