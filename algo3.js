@@ -5,7 +5,14 @@ If the user enters a number that is above 60, your program should fail, and log 
 (Hint: Create an HTML UI to capture input and display the result of running you algorithm)
 */
 
-function minuteAngle(minute) {
+
+function minuteAngle() {
+
+    let minute = document.getElementById("minute").value;
+
+    if (minute > 60) {
+        alert('Put some decent minute, please :D');
+    } else {
 
     let angulo = 0;
     let minuteMaior30 = minute-30;
@@ -14,9 +21,23 @@ function minuteAngle(minute) {
     } else if (minute > 30) {
     angulo = ((minuteMaior30/30)*(180))+180;
     }
+
+    let angulohora = ((angulo/360))*6;
+    let anguloEntreMinutoEHora = angulo - angulohora;
+
+
         console.log(angulo);
+        document.getElementById('answer0').innerHTML = `Your angle to 0 o'clock is ${angulo}º`;
+        document.getElementById('answerclock').innerHTML = `Your angle between pointers is ${anguloEntreMinutoEHora}º`;
         return angulo;
+}
     }
-    
-    minuteAngle(minute);
+
+    // function getInputValue(){
+
+    //     let inputVal = document.getElementById("myInput").value;
+        
+    //     minuteAngle(inputVal);
+    //     alert(angulo);
+    // }
     
